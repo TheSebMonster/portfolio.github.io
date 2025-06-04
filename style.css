@@ -1,124 +1,228 @@
+/* Import de Google Fonts pour une typographie moderne */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
     color: #222;
+    min-height: 100vh;
 }
 
+/* Entête stylisé avec effet de vague */
 header {
-    background: #2b3a42;
+    background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
     color: #fff;
     text-align: center;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
+    position: relative;
+    border-bottom-left-radius: 50% 8vw;
+    border-bottom-right-radius: 50% 8vw;
+    box-shadow: 0 8px 32px rgba(90, 90, 150, 0.18);
 }
 
 .photo-profil {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 6px solid #fff;
     margin-bottom: 1rem;
+    box-shadow: 0 6px 32px rgba(90, 90, 150, 0.25);
+    object-fit: cover;
 }
 
 .nom {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #232526;
+}
+
+h1, h2 {
+    margin: 0.2em 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.6rem;
+    text-shadow: 0 3px 10px rgba(90, 90, 150, 0.12);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #232526;
+    opacity: 0.85;
 }
 
 section {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: #fff;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 850px;
+    margin: 2.5rem auto;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 18px;
+    padding: 2.2rem 2rem;
+    box-shadow: 0 8px 32px rgba(90, 90, 150, 0.13);
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.2s;
+}
+
+section:hover {
+    box-shadow: 0 12px 40px rgba(90, 90, 150, 0.18);
 }
 
 h3 {
-    color: #2b3a42;
+    color: #5ee7df;
     margin-top: 0;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    border-left: 6px solid #b490ca;
+    padding-left: 0.7em;
+    margin-bottom: 1.3em;
 }
 
 .timeline {
-    border-left: 3px solid #2b3a42;
+    border-left: 4px solid #b490ca;
     margin-left: 20px;
     padding-left: 20px;
 }
 .timeline-item {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     position: relative;
 }
 .timeline-date {
     font-weight: bold;
-    color: #2b3a42;
+    color: #b490ca;
     margin-right: 10px;
+    font-size: 1.08em;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+ul li {
+    margin-bottom: 0.6em;
+    line-height: 1.5;
 }
 
 .vignettes {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 .vignette {
-    background: #e0e7ef;
-    border-radius: 8px;
-    padding: 1.5rem;
+    background: linear-gradient(120deg, #b490ca 0%, #5ee7df 100%);
+    border-radius: 12px;
+    padding: 1.7rem;
     text-align: center;
-    flex: 1;
+    flex: 1 1 180px;
     font-weight: bold;
-    color: #2b3a42;
+    color: #232526;
     text-decoration: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    transition: background 0.2s;
+    box-shadow: 0 4px 18px rgba(90, 90, 150, 0.09);
+    font-size: 1.1rem;
+    transition: transform 0.18s, box-shadow 0.18s;
+    position: relative;
+    overflow: hidden;
 }
 .vignette:hover {
-    background: #b9c5d8;
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(90, 90, 150, 0.18);
+    color: #fff;
+    background: linear-gradient(120deg, #5ee7df 0%, #b490ca 100%);
 }
 
 .btn {
     display: inline-block;
-    background: #2b3a42;
-    color: #fff;
-    padding: 0.7rem 1.5rem;
-    border-radius: 4px;
+    background: linear-gradient(90deg, #b490ca 0%, #5ee7df 100%);
+    color: #232526;
+    padding: 0.85rem 2rem;
+    border-radius: 6px;
     text-decoration: none;
-    margin-top: 1rem;
-    transition: background 0.2s;
+    margin-top: 1.3rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(90, 90, 150, 0.09);
+    border: none;
+    transition: background 0.18s, color 0.18s, transform 0.18s;
+    cursor: pointer;
 }
 .btn:hover {
-    background: #1a2328;
+    background: linear-gradient(90deg, #5ee7df 0%, #b490ca 100%);
+    color: #fff;
+    transform: scale(1.04);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.1rem;
+    margin-top: 1.5rem;
 }
 input, textarea {
-    padding: 0.7rem;
-    border: 1px solid #c4c4c4;
-    border-radius: 4px;
+    padding: 0.8rem;
+    border: 1.5px solid #b490ca;
+    border-radius: 6px;
     font-size: 1rem;
+    background: #f6f7fb;
+    color: #232526;
+    transition: border 0.18s;
 }
-button {
-    background: #2b3a42;
-    color: #fff;
+input:focus, textarea:focus {
+    border: 1.5px solid #5ee7df;
+    outline: none;
+    background: #fff;
+}
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+button[type="submit"] {
+    background: linear-gradient(90deg, #b490ca 0%, #5ee7df 100%);
+    color: #232526;
     border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
+    padding: 0.85rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(90, 90, 150, 0.09);
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.18s, color 0.18s, transform 0.18s;
 }
-button:hover {
-    background: #1a2328;
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #5ee7df 0%, #b490ca 100%);
+    color: #fff;
+    transform: scale(1.04);
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    background: #2b3a42;
-    color: #fff;
+    background: linear-gradient(135deg, #b490ca 0%, #5ee7df 100%);
+    color: #232526;
     margin-top: 2rem;
+    font-weight: 600;
+    border-top-left-radius: 50% 8vw;
+    border-top-right-radius: 50% 8vw;
+    box-shadow: 0 -8px 32px rgba(90, 90, 150, 0.13);
+    letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    section {
+        padding: 1.2rem 0.7rem;
+    }
+    .vignettes {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    header {
+        padding: 2rem 0.5rem 1.2rem 0.5rem;
+    }
 }
